@@ -57,30 +57,42 @@
 						
 						console.log('[MMB] Template Data:', templateData);
 						
-						// Apply settings
+						// Get the element model
+						var elementModel = currentElement.model;
+						
+						// Apply settings one by one
 						if (templateData.settings) {
 							$.each(templateData.settings, function(key, value) {
-								console.log('[MMB] Setting:', key, value);
+								console.log('[MMB] Setting:', key, '=', value);
 								settings.set(key, value);
 							});
 						}
 						
 						// Apply menu items
 						if (templateData.menu_items) {
-							console.log('[MMB] Menu Items:', templateData.menu_items);
+							console.log('[MMB] Menu Items:', templateData.menu_items.length, 'items');
 							settings.set('menu_items', templateData.menu_items);
 						}
 						
-						// Trigger change to update preview
-						currentElement.model.trigger('change');
+						// Save to history for undo/redo
+						elementor.history.history.startItem({
+							type: 'change',
+							title: 'Template Applied'
+						});
+						
+						// Trigger render
+						elementModel.renderRemoteServer();
+						
+						// End history item
+						elementor.history.history.endItem();
 						
 						// Show success message
 						elementor.notifications.showToast({
-							message: 'Template loaded successfully! Scroll down to see Menu Items.',
+							message: 'Template loaded! Check the preview and Menu Items section below.',
 							buttons: []
 						});
 						
-						console.log('[MMB] Template applied successfully');
+						console.log('[MMB] Template applied and preview updated');
 					} else {
 						console.error('[MMB] Failed response:', response);
 						alert('Failed to load template: ' + (response.data && response.data.message ? response.data.message : 'Unknown error'));
