@@ -1,0 +1,217 @@
+{
+  "title": "E-Commerce Mega Menu",
+  "settings": {
+    "menu_layout": "horizontal",
+    "dropdown_trigger": "hover",
+    "dropdown_animation": "fade",
+    "mobile_breakpoint": 1024,
+    "show_hamburger": "yes"
+  },
+  "menu_items": [
+    {
+      "item_label": "Home",
+      "item_link": {
+        "url": "#"
+      },
+      "item_icon": {
+        "value": "fas fa-home",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "none"
+    },
+    {
+      "item_label": "Shop",
+      "item_link": {
+        "url": "#shop"
+      },
+      "item_badge": "SALE",
+      "item_badge_color": "#e74c3c",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "inline",
+      "dropdown_type": "mega",
+      "mega_columns": [
+        {
+          "col_heading": "Furniture",
+          "col_links": [
+            {
+              "link_label": "Dining Chairs",
+              "link_url": {
+                "url": "#dining-chairs"
+              },
+              "link_icon": {
+                "value": "fas fa-chair",
+                "library": "fa-solid"
+              }
+            },
+            {
+              "link_label": "Counter Stools",
+              "link_url": {
+                "url": "#counter-stools"
+              },
+              "link_icon": {
+                "value": "fas fa-couch",
+                "library": "fa-solid"
+              }
+            },
+            {
+              "link_label": "Occasional Chairs",
+              "link_url": {
+                "url": "#occasional-chairs"
+              }
+            },
+            {
+              "link_label": "Sofas & Sectionals",
+              "link_url": {
+                "url": "#sofas"
+              }
+            }
+          ]
+        },
+        {
+          "col_heading": "Accessories",
+          "col_links": [
+            {
+              "link_label": "Cabinets",
+              "link_url": {
+                "url": "#cabinets"
+              }
+            },
+            {
+              "link_label": "Screens",
+              "link_url": {
+                "url": "#screens"
+              }
+            },
+            {
+              "link_label": "Outdoor Furniture",
+              "link_url": {
+                "url": "#outdoor"
+              }
+            },
+            {
+              "link_label": "Rugs & Carpets",
+              "link_url": {
+                "url": "#rugs"
+              }
+            }
+          ]
+        },
+        {
+          "col_heading": "Lighting",
+          "col_links": [
+            {
+              "link_label": "Pendant Lights",
+              "link_url": {
+                "url": "#pendant"
+              },
+              "link_icon": {
+                "value": "fas fa-lightbulb",
+                "library": "fa-solid"
+              }
+            },
+            {
+              "link_label": "Table Lamps",
+              "link_url": {
+                "url": "#table-lamps"
+              }
+            },
+            {
+              "link_label": "Floor Lamps",
+              "link_url": {
+                "url": "#floor-lamps"
+              }
+            },
+            {
+              "link_label": "Wall Sconces",
+              "link_url": {
+                "url": "#wall-sconces"
+              }
+            }
+          ]
+        },
+        {
+          "col_heading": "Decor",
+          "col_links": [
+            {
+              "link_label": "Wall Art",
+              "link_url": {
+                "url": "#wall-art"
+              }
+            },
+            {
+              "link_label": "Mirrors",
+              "link_url": {
+                "url": "#mirrors"
+              }
+            },
+            {
+              "link_label": "Vases",
+              "link_url": {
+                "url": "#vases"
+              }
+            },
+            {
+              "link_label": "Cushions",
+              "link_url": {
+                "url": "#cushions"
+              }
+            }
+          ]
+        }
+      ],
+      "mega_promo_text": "🔥 Summer Sale - Up to 50% OFF on Selected Items!",
+      "mega_promo_link": {
+        "url": "#sale"
+      }
+    },
+    {
+      "item_label": "New Arrivals",
+      "item_link": {
+        "url": "#new"
+      },
+      "item_badge": "HOT",
+      "item_badge_color": "#f39c12",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "top",
+      "dropdown_type": "products",
+      "products_count": 4,
+      "products_columns": "4",
+      "products_orderby": "date",
+      "products_show_price": "yes"
+    },
+    {
+      "item_label": "Best Sellers",
+      "item_link": {
+        "url": "#bestsellers"
+      },
+      "dropdown_type": "products",
+      "products_count": 4,
+      "products_columns": "4",
+      "products_orderby": "popularity",
+      "products_show_price": "yes"
+    },
+    {
+      "item_label": "Blog",
+      "item_link": {
+        "url": "#blog"
+      },
+      "dropdown_type": "posts",
+      "posts_post_type": "post",
+      "posts_count": 3,
+      "posts_columns": "3",
+      "posts_show_thumb": "yes",
+      "posts_show_date": "yes"
+    },
+    {
+      "item_label": "Contact",
+      "item_link": {
+        "url": "#contact"
+      },
+      "item_icon": {
+        "value": "fas fa-phone",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "none"
+    }
+  ]
+}

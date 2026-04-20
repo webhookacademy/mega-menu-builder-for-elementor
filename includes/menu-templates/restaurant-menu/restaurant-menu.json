@@ -1,0 +1,283 @@
+{
+  "title": "Restaurant Menu",
+  "settings": {
+    "menu_layout": "vertical",
+    "dropdown_trigger": "hover",
+    "dropdown_animation": "slide",
+    "mobile_breakpoint": 1024,
+    "cat_header_label": "Menu Categories",
+    "cat_header_open": "yes",
+    "vertical_sidebar_width": {
+      "size": 280,
+      "unit": "px"
+    }
+  },
+  "menu_items": [
+    {
+      "item_label": "Appetizers",
+      "item_link": {
+        "url": "#appetizers"
+      },
+      "item_icon": {
+        "value": "fas fa-utensils",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Spring Rolls",
+          "sub_link": {
+            "url": "#spring-rolls"
+          },
+          "sub_desc": "Crispy vegetable rolls"
+        },
+        {
+          "sub_label": "Chicken Wings",
+          "sub_link": {
+            "url": "#wings"
+          },
+          "sub_desc": "Spicy buffalo wings"
+        },
+        {
+          "sub_label": "Garlic Bread",
+          "sub_link": {
+            "url": "#garlic-bread"
+          },
+          "sub_desc": "Toasted with herbs"
+        },
+        {
+          "sub_label": "Soup of the Day",
+          "sub_link": {
+            "url": "#soup"
+          },
+          "sub_desc": "Chef's special"
+        }
+      ]
+    },
+    {
+      "item_label": "Main Course",
+      "item_link": {
+        "url": "#main"
+      },
+      "item_icon": {
+        "value": "fas fa-drumstick-bite",
+        "library": "fa-solid"
+      },
+      "item_badge": "POPULAR",
+      "item_badge_color": "#27ae60",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "inline",
+      "dropdown_type": "mega",
+      "mega_columns": [
+        {
+          "col_heading": "Chicken",
+          "col_links": [
+            {
+              "link_label": "Grilled Chicken",
+              "link_url": {
+                "url": "#grilled-chicken"
+              }
+            },
+            {
+              "link_label": "Chicken Curry",
+              "link_url": {
+                "url": "#chicken-curry"
+              }
+            },
+            {
+              "link_label": "Fried Chicken",
+              "link_url": {
+                "url": "#fried-chicken"
+              }
+            }
+          ]
+        },
+        {
+          "col_heading": "Beef",
+          "col_links": [
+            {
+              "link_label": "Beef Steak",
+              "link_url": {
+                "url": "#beef-steak"
+              }
+            },
+            {
+              "link_label": "Beef Burger",
+              "link_url": {
+                "url": "#burger"
+              }
+            },
+            {
+              "link_label": "Beef Kebab",
+              "link_url": {
+                "url": "#kebab"
+              }
+            }
+          ]
+        },
+        {
+          "col_heading": "Seafood",
+          "col_links": [
+            {
+              "link_label": "Grilled Fish",
+              "link_url": {
+                "url": "#fish"
+              }
+            },
+            {
+              "link_label": "Shrimp Pasta",
+              "link_url": {
+                "url": "#shrimp"
+              }
+            },
+            {
+              "link_label": "Lobster",
+              "link_url": {
+                "url": "#lobster"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_label": "Pizza & Pasta",
+      "item_link": {
+        "url": "#pizza"
+      },
+      "item_icon": {
+        "value": "fas fa-pizza-slice",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Margherita Pizza",
+          "sub_link": {
+            "url": "#margherita"
+          },
+          "sub_desc": "Classic tomato & cheese"
+        },
+        {
+          "sub_label": "Pepperoni Pizza",
+          "sub_link": {
+            "url": "#pepperoni"
+          },
+          "sub_desc": "Loaded with pepperoni"
+        },
+        {
+          "sub_label": "Spaghetti Carbonara",
+          "sub_link": {
+            "url": "#carbonara"
+          },
+          "sub_desc": "Creamy pasta"
+        },
+        {
+          "sub_label": "Lasagna",
+          "sub_link": {
+            "url": "#lasagna"
+          },
+          "sub_desc": "Layered pasta bake"
+        }
+      ]
+    },
+    {
+      "item_label": "Desserts",
+      "item_link": {
+        "url": "#desserts"
+      },
+      "item_icon": {
+        "value": "fas fa-ice-cream",
+        "library": "fa-solid"
+      },
+      "item_badge": "NEW",
+      "item_badge_color": "#e74c3c",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "inline",
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Chocolate Cake",
+          "sub_link": {
+            "url": "#chocolate-cake"
+          },
+          "sub_icon": {
+            "value": "fas fa-birthday-cake",
+            "library": "fa-solid"
+          }
+        },
+        {
+          "sub_label": "Ice Cream",
+          "sub_link": {
+            "url": "#ice-cream"
+          },
+          "sub_icon": {
+            "value": "fas fa-ice-cream",
+            "library": "fa-solid"
+          }
+        },
+        {
+          "sub_label": "Tiramisu",
+          "sub_link": {
+            "url": "#tiramisu"
+          }
+        }
+      ]
+    },
+    {
+      "item_label": "Beverages",
+      "item_link": {
+        "url": "#beverages"
+      },
+      "item_icon": {
+        "value": "fas fa-coffee",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Coffee",
+          "sub_link": {
+            "url": "#coffee"
+          },
+          "sub_desc": "Hot & Cold"
+        },
+        {
+          "sub_label": "Tea",
+          "sub_link": {
+            "url": "#tea"
+          },
+          "sub_desc": "Various flavors"
+        },
+        {
+          "sub_label": "Fresh Juice",
+          "sub_link": {
+            "url": "#juice"
+          },
+          "sub_desc": "Seasonal fruits"
+        },
+        {
+          "sub_label": "Soft Drinks",
+          "sub_link": {
+            "url": "#soft-drinks"
+          }
+        }
+      ]
+    },
+    {
+      "item_label": "Special Offers",
+      "item_link": {
+        "url": "#offers"
+      },
+      "item_icon": {
+        "value": "fas fa-gift",
+        "library": "fa-solid"
+      },
+      "item_badge": "SAVE 20%",
+      "item_badge_color": "#f39c12",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "top",
+      "dropdown_type": "none"
+    }
+  ]
+}

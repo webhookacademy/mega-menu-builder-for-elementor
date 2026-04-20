@@ -1,0 +1,521 @@
+# Copyright (C) 2026 Mega Menu Builder for Elementor
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mega Menu Builder for Elementor 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mega-menu-builder-for-elementor\n"
+"POT-Creation-Date: 2026-04-20 14:55:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: mega-menu-builder-for-elementor.php
+msgid "Mega Menu Builder for Elementor"
+msgstr ""
+
+#: mega-menu-builder-for-elementor.php
+msgid "Advanced mega menu builder widget for Elementor with horizontal/vertical layouts, dropdown animations, WooCommerce products, posts integration, and mobile-responsive design."
+msgstr ""
+
+#: mega-menu-builder-for-elementor.php
+msgid "Elementor"
+msgstr ""
+
+#: mega-menu-builder-for-elementor.php
+msgid "PHP"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Menu"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Menu Builder"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Layout"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Orientation"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Horizontal"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Vertical"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Alignment"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Left"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Center"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Right"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Alignment"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Trigger"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Hover"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Click"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Animation"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Slide"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Fade"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Zoom"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Indicator Icon"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mobile Settings"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mobile Breakpoint (px)"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Below this width the hamburger menu appears."
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Hamburger Button"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Hamburger Open Icon"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Hamburger Close Icon"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Vertical Sidebar"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Header Label"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "All Categories"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Open by Default"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Menu Items"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Label"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Menu Item"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Link"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Icon"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Badge"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Badge Text"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "e.g. HOT, NEW, SALE"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Badge Background"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Badge Text Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Badge Position"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Inline (next to label)"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Above label (ribbon)"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Type"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "None"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Simple List"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Panel"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "WP Custom Menu"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Recent Posts"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "WooCommerce Products"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Sub Items"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Sub Item"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Description"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Columns"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Column Heading"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Category"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Links"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Link Item"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "URL"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Image"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Panel Image"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Promo Bar Text"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Promo Bar Link"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Select WP Menu"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "— Select Menu —"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Post Type"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Number of Posts"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Columns"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Thumbnail"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Date"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Number of Products"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Order By"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Latest"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Popular"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Top Rated"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Random"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Featured Only"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Price"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Nav Bar"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Padding"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Border Radius"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Item Padding"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Items Gap"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Normal"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Text Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Background"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Active Underline Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Font Size"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Category Header"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Panel"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Inner Padding"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Sub-menu Links"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Hover Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Column Title Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Column Title Dot Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Link Padding"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Posts Dropdown"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Image"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Show Title"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Image Height"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Title"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Date"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Card"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Card Background"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Card Padding"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Card Border Radius"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Cards Gap"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Products Dropdown"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Price"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Sale Price Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Old Price Color"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Mega Panel Links"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Size"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Link Border Radius"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Gap Between Items"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Dropdown Indicator"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Rotate on Open"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Spacing"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Hamburger Button"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "WooCommerce required."
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Main Navigation"
+msgstr ""
+
+#: includes/widgets/mega-menu-widget.php
+msgid "Toggle Menu"
+msgstr ""

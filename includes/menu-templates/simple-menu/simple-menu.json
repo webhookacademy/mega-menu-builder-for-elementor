@@ -1,0 +1,138 @@
+{
+  "title": "Simple Navigation Menu",
+  "settings": {
+    "menu_layout": "horizontal",
+    "dropdown_trigger": "hover",
+    "dropdown_animation": "slide",
+    "mobile_breakpoint": 1024,
+    "show_hamburger": "yes"
+  },
+  "menu_items": [
+    {
+      "item_label": "Home",
+      "item_link": {
+        "url": "#",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "item_icon": {
+        "value": "fas fa-home",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "none"
+    },
+    {
+      "item_label": "About",
+      "item_link": {
+        "url": "#about",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Our Story",
+          "sub_link": {
+            "url": "#story"
+          },
+          "sub_icon": {
+            "value": "fas fa-book",
+            "library": "fa-solid"
+          }
+        },
+        {
+          "sub_label": "Our Team",
+          "sub_link": {
+            "url": "#team"
+          },
+          "sub_icon": {
+            "value": "fas fa-users",
+            "library": "fa-solid"
+          }
+        },
+        {
+          "sub_label": "Careers",
+          "sub_link": {
+            "url": "#careers"
+          },
+          "sub_icon": {
+            "value": "fas fa-briefcase",
+            "library": "fa-solid"
+          }
+        }
+      ]
+    },
+    {
+      "item_label": "Services",
+      "item_link": {
+        "url": "#services",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "dropdown_type": "simple",
+      "sub_items": [
+        {
+          "sub_label": "Web Design",
+          "sub_link": {
+            "url": "#web-design"
+          },
+          "sub_desc": "Beautiful and responsive websites"
+        },
+        {
+          "sub_label": "Development",
+          "sub_link": {
+            "url": "#development"
+          },
+          "sub_desc": "Custom web applications"
+        },
+        {
+          "sub_label": "SEO",
+          "sub_link": {
+            "url": "#seo"
+          },
+          "sub_desc": "Search engine optimization"
+        }
+      ]
+    },
+    {
+      "item_label": "Portfolio",
+      "item_link": {
+        "url": "#portfolio",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "dropdown_type": "none"
+    },
+    {
+      "item_label": "Blog",
+      "item_link": {
+        "url": "#blog",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "item_badge": "NEW",
+      "item_badge_color": "#e74c3c",
+      "item_badge_text_color": "#ffffff",
+      "badge_position": "inline",
+      "dropdown_type": "posts",
+      "posts_post_type": "post",
+      "posts_count": 3,
+      "posts_columns": "3",
+      "posts_show_thumb": "yes",
+      "posts_show_date": "yes"
+    },
+    {
+      "item_label": "Contact",
+      "item_link": {
+        "url": "#contact",
+        "is_external": "",
+        "nofollow": ""
+      },
+      "item_icon": {
+        "value": "fas fa-envelope",
+        "library": "fa-solid"
+      },
+      "dropdown_type": "none"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "templates": [
+    {
+      "id": "simple-menu",
+      "title": "Simple Navigation Menu",
+      "description": "Clean and minimal horizontal navigation menu perfect for any website",
+      "category": "basic",
+      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154827.png",
+      "preview_url": "",
+      "file": "simple-menu/simple-menu.json",
+      "features": [
+        "Horizontal Layout",
+        "Hover Effects",
+        "Mobile Responsive",
+        "Simple Dropdowns"
+      ],
+      "tags": ["simple", "basic", "horizontal", "minimal"]
+    },
+    {
+      "id": "ecommerce-menu",
+      "title": "E-Commerce Mega Menu",
+      "description": "Advanced mega menu with product categories, featured products, and promotional banners",
+      "category": "ecommerce",
+      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154839.png",
+      "preview_url": "",
+      "file": "ecommerce-menu/ecommerce-menu.json",
+      "features": [
+        "Multi-Column Layout",
+        "Product Showcase",
+        "Category Icons",
+        "Promo Banners",
+        "WooCommerce Ready"
+      ],
+      "tags": ["ecommerce", "shop", "products", "mega", "woocommerce"]
+    },
+    {
+      "id": "restaurant-menu",
+      "title": "Restaurant Menu",
+      "description": "Elegant vertical menu perfect for restaurants, cafes, and food businesses",
+      "category": "business",
+      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154853.png",
+      "preview_url": "",
+      "file": "restaurant-menu/restaurant-menu.json",
+      "features": [
+        "Vertical Sidebar",
+        "Category Header",
+        "Icon Support",
+        "Badge Labels",
+        "Mobile Friendly"
+      ],
+      "tags": ["restaurant", "food", "vertical", "sidebar", "business"]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "basic",
+      "name": "Basic Menus",
+      "description": "Simple and clean navigation menus"
+    },
+    {
+      "slug": "ecommerce",
+      "name": "E-Commerce",
+      "description": "Menus designed for online stores"
+    },
+    {
+      "slug": "business",
+      "name": "Business",
+      "description": "Professional menus for business websites"
+    }
+  ]
+}
