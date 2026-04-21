@@ -747,7 +747,7 @@ private function get_post_types() {
 				foreach ( $subs as $sub ) {
 					$su  = ! empty( $sub['sub_link']['url'] ) ? $sub['sub_link']['url'] : '#';
 					$st  = ! empty( $sub['sub_link']['is_external'] ) ? ' target="_blank" rel="noopener noreferrer"' : '';
-					echo '<li role="none"><a href="' . esc_url( $su ) . '" role="menuitem"' . $st . '>';
+					echo '<li role="none"><a href="' . esc_url( $su ) . '" role="menuitem"' . esc_attr( $st ) . '>';
 					if ( ! empty( $sub['sub_icon']['value'] ) ) {
 						echo '<span class="mmb-mm-sub-icon" aria-hidden="true">';
 						Icons_Manager::render_icon( $sub['sub_icon'], [ 'aria-hidden' => 'true' ] );
@@ -785,7 +785,7 @@ private function get_post_types() {
 						$icon  = ! empty( $link['link_icon']['value'] ) ? $link['link_icon'] : false;
 						$img   = ! empty( $link['link_image']['url'] ) ? $link['link_image']['url'] : '';
 						
-						echo '<a href="' . esc_url( $url ) . '"' . $ext . ' class="mmb-mm-col-link-item">';
+						echo '<a href="' . esc_url( $url ) . '"' . esc_attr( $ext ) . ' class="mmb-mm-col-link-item">';
 						if ( $img ) {
 							// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 							echo '<span class="mmb-mm-col-link-img"><img src="' . esc_url( $img ) . '" alt="' . esc_attr( $lbl ) . '" loading="lazy"></span>';
@@ -868,12 +868,14 @@ private function get_post_types() {
 				$show_image = ! isset( $s['products_show_image_global'] ) || 'yes' === $s['products_show_image_global'];
 				$show_title = ! isset( $s['products_show_title_global'] ) || 'yes' === $s['products_show_title_global'];
 				$show_price = isset( $s['products_show_price_global'] ) ? 'yes' === $s['products_show_price_global'] : ( ! isset( $item['products_show_price'] ) || 'yes' === $item['products_show_price'] );
+				// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Required for WooCommerce product sorting by popularity and rating
 				$ord_map = [
 					'date'       => [ 'orderby' => 'date',            'order' => 'DESC', 'meta_key' => '' ],
 					'popularity' => [ 'orderby' => 'meta_value_num',  'order' => 'DESC', 'meta_key' => 'total_sales' ],
 					'rating'     => [ 'orderby' => 'meta_value_num',  'order' => 'DESC', 'meta_key' => '_wc_average_rating' ],
 					'rand'       => [ 'orderby' => 'rand',            'order' => 'ASC',  'meta_key' => '' ],
 				];
+				// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 				$ord  = $ord_map[ $orderby ] ?? $ord_map['date'];
 				$args = [ 'post_type' => 'product', 'posts_per_page' => $count, 'post_status' => 'publish', 'orderby' => $ord['orderby'], 'order' => $ord['order'], 'no_found_rows' => true ];
 				if ( $ord['meta_key'] ) $args['meta_key'] = $ord['meta_key']; // phpcs:ignore WordPress.DB.SlowDBQuery
@@ -883,10 +885,10 @@ private function get_post_types() {
 					echo '<div class="mmb-mm-products-panel"><div class="mmb-mm-products-grid" style="--mm-prod-cols:' . esc_attr( $columns ) . ';">';
 					while ( $q->have_posts() ) {
 						$q->the_post();
-						global $product;
-						$product    = wc_get_product( get_the_ID() );
+						global $product; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- WooCommerce global variable
+						$product    = wc_get_product( get_the_ID() ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 						$thumb      = get_the_post_thumbnail_url( null, 'woocommerce_thumbnail' );
-						$price_html = $product ? $product->get_price_html() : '';
+						$price_html = $product ? $product->get_price_html() : ''; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 						echo '<div class="mmb-mm-product-card"><a href="' . esc_url( get_permalink() ) . '">';
 						if ( $show_image && $thumb ) {
 							// phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
@@ -1091,7 +1093,7 @@ private function get_post_types() {
 			$ikey      = $item['_id'];
 		?>
 		<li class="mmb-mm-item<?php echo $has_drop ? ' mmb-mm-has-drop' : ''; ?><?php echo ( $has_drop && 'mega' === $type ) ? ' mmb-mm-mega-item' : ''; ?> elementor-repeater-item-<?php echo esc_attr( $ikey ); ?>" role="none">
-			<a href="<?php echo esc_url( $url ); ?>" class="mmb-mm-link" role="menuitem"<?php echo $ext . $nofollow; ?>>
+			<a href="<?php echo esc_url( $url ); ?>" class="mmb-mm-link" role="menuitem"<?php echo esc_attr( $ext ) . esc_attr( $nofollow ); ?>>
 				<?php if ( ! empty( $item['item_icon']['value'] ) ) : ?>
 				<span class="mmb-mm-item-icon" aria-hidden="true"><?php Icons_Manager::render_icon( $item['item_icon'], [ 'aria-hidden' => 'true' ] ); ?></span>
 				<?php endif; ?>

@@ -1,38 +1,42 @@
 <?php
 /**
  * Admin Dashboard Page
+ *
+ * @package Mega_Menu_Builder_For_Elementor
  */
+
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Template file with local scope variables
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // Get templates
-$templates_file = MMB_PATH . 'includes/menu-templates/index.json';
-$templates_data = [];
+$mmb_templates_file = MMB_PATH . 'includes/menu-templates/index.json';
+$mmb_templates_data = [];
 
-if ( file_exists( $templates_file ) ) {
-	$json_content = file_get_contents( $templates_file );
-	$templates_data = json_decode( $json_content, true );
+if ( file_exists( $mmb_templates_file ) ) {
+	$json_content = file_get_contents( $mmb_templates_file );
+	$mmb_templates_data = json_decode( $json_content, true );
 }
 
-$templates = isset( $templates_data['templates'] ) ? $templates_data['templates'] : [];
-$categories = isset( $templates_data['categories'] ) ? $templates_data['categories'] : [];
+$mmb_templates = isset( $mmb_templates_data['templates'] ) ? $mmb_templates_data['templates'] : [];
+$mmb_categories = isset( $mmb_templates_data['categories'] ) ? $mmb_templates_data['categories'] : [];
 
 // Get already imported templates
-$saved_templates = get_option( 'mmb_saved_templates', [] );
-$imported_template_ids = [];
-foreach ( $saved_templates as $saved ) {
+$mmb_saved_templates = get_option( 'mmb_saved_templates', [] );
+$mmb_imported_template_ids = [];
+foreach ( $mmb_saved_templates as $saved ) {
 	if ( isset( $saved['original_id'] ) ) {
-		$imported_template_ids[] = $saved['original_id'];
+		$mmb_imported_template_ids[] = $saved['original_id'];
 	}
 }
 
 // Handle AJAX import
 if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_template', 'mmb_nonce' ) ) {
-	$template_id = sanitize_text_field( $_POST['template_id'] );
+	$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( wp_unslash( $_POST['template_id'] ) ) : '';
 	
-	foreach ( $templates as $template ) {
+	foreach ( $mmb_templates as $template ) {
 		if ( $template['id'] === $template_id ) {
 			$template_file = MMB_PATH . 'includes/menu-templates/' . $template['file'];
 			
@@ -86,7 +90,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 				<span class="dashicons dashicons-layout"></span>
 			</div>
 			<div class="mmb-stat-content">
-				<h3><?php echo count( $templates ); ?></h3>
+				<h3><?php echo count( $mmb_templates ); ?></h3>
 				<p><?php esc_html_e( 'Templates Available', 'mega-menu-builder-for-elementor' ); ?></p>
 			</div>
 		</div>
@@ -95,7 +99,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 				<span class="dashicons dashicons-saved"></span>
 			</div>
 			<div class="mmb-stat-content">
-				<h3><?php echo count( $saved_templates ); ?></h3>
+				<h3><?php echo count( $mmb_saved_templates ); ?></h3>
 				<p><?php esc_html_e( 'Templates Imported', 'mega-menu-builder-for-elementor' ); ?></p>
 			</div>
 		</div>
@@ -104,7 +108,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 				<span class="dashicons dashicons-category"></span>
 			</div>
 			<div class="mmb-stat-content">
-				<h3><?php echo count( $categories ); ?></h3>
+				<h3><?php echo count( $mmb_categories ); ?></h3>
 				<p><?php esc_html_e( 'Categories', 'mega-menu-builder-for-elementor' ); ?></p>
 			</div>
 		</div>
@@ -120,7 +124,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 	</div>
 
 	<!-- Imported Templates Management -->
-	<?php if ( ! empty( $saved_templates ) ) : ?>
+	<?php if ( ! empty( $mmb_saved_templates ) ) : ?>
 	<div class="mmb-imported-templates-section">
 		<div class="mmb-section-header">
 			<h2>
@@ -136,7 +140,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 			</div>
 		</div>
 		<div class="mmb-imported-templates-list">
-			<?php foreach ( $saved_templates as $saved_id => $saved_template ) : ?>
+			<?php foreach ( $mmb_saved_templates as $saved_id => $saved_template ) : ?>
 				<div class="mmb-imported-item" data-template-id="<?php echo esc_attr( $saved_id ); ?>">
 					<div class="mmb-imported-item-icon">
 						<span class="dashicons dashicons-menu-alt"></span>
@@ -145,8 +149,9 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 						<h4><?php echo esc_html( $saved_template['title'] ); ?></h4>
 						<p class="mmb-imported-meta">
 							<span class="dashicons dashicons-calendar-alt"></span>
-							<?php 
+							<?php
 							printf( 
+								/* translators: %s: date and time when template was imported */
 								esc_html__( 'Imported on %s', 'mega-menu-builder-for-elementor' ),
 								esc_html( date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), strtotime( $saved_template['imported_at'] ) ) )
 							); 
@@ -187,7 +192,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 				<button class="mmb-filter-tab active" data-category="all">
 					<?php esc_html_e( 'All Templates', 'mega-menu-builder-for-elementor' ); ?>
 				</button>
-				<?php foreach ( $categories as $category ) : ?>
+				<?php foreach ( $mmb_categories as $category ) : ?>
 					<button class="mmb-filter-tab" data-category="<?php echo esc_attr( $category['slug'] ); ?>">
 						<?php echo esc_html( $category['name'] ); ?>
 					</button>
@@ -196,8 +201,8 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 		</div>
 
 		<div class="mmb-templates-grid">
-			<?php foreach ( $templates as $template ) : 
-				$is_imported = in_array( $template['id'], $imported_template_ids );
+			<?php foreach ( $mmb_templates as $template ) : 
+				$is_imported = in_array( $template['id'], $mmb_imported_template_ids );
 			?>
 				<div class="mmb-template-card <?php echo $is_imported ? 'mmb-template-imported' : ''; ?>" data-category="<?php echo esc_attr( $template['category'] ); ?>">
 					<div class="mmb-template-thumbnail">
@@ -308,7 +313,7 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 		<div class="mmb-cta-content">
 			<h2><?php esc_html_e( 'Ready to Create Your Menu?', 'mega-menu-builder-for-elementor' ); ?></h2>
 			<p><?php esc_html_e( 'Start building beautiful navigation menus with Elementor', 'mega-menu-builder-for-elementor' ); ?></p>
-			<a href="<?php echo admin_url( 'post-new.php?post_type=page' ); ?>" class="button button-primary button-hero">
+			<a href="<?php echo esc_url( admin_url( 'post-new.php?post_type=page' ) ); ?>" class="button button-primary button-hero">
 				<span class="dashicons dashicons-plus-alt"></span>
 				<?php esc_html_e( 'Create New Page', 'mega-menu-builder-for-elementor' ); ?>
 			</a>

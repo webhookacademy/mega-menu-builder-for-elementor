@@ -3,13 +3,13 @@ Contributors:      webhookacademy
 Author URI:        https://webhookacademy.com/
 Requires at least: 6.0
 Requires PHP:      7.4
-Tested up to:      6.7
+Tested up to:      6.9
 Stable tag:        1.0.0
 License:           GPL v2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Tags:              elementor, mega menu, navigation, menu builder, dropdown menu
 
-Advanced mega menu builder widget for Elementor with horizontal/vertical layouts, dropdown animations, WooCommerce integration, and mobile-responsive design.
+Advanced mega menu builder for Elementor with layouts, animations, WooCommerce integration, and mobile-responsive design.
 
 == Description ==
 
@@ -150,3 +150,16 @@ This plugin follows WordPress coding standards and security best practices:
 ## License
 
 Mega Menu Builder for Elementor is licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
+
+== Third-Party Libraries ==
+
+This plugin includes the following third-party libraries:
+
+**SweetAlert2**
+- Version: 11.14.5
+- License: MIT License
+- Author: Limon Monte
+- URL: https://sweetalert2.github.io/
+- Files: admin/assets/vendor/sweetalert2/
+- Used for: Beautiful, responsive alert dialogs in admin dashboard
+- The MIT License is compatible with GPL v2 or later

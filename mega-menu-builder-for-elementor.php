@@ -11,7 +11,7 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 6.0
- * Tested up to:      6.7
+ * Tested up to:      6.9
  * Requires PHP:      7.4
  * Requires Plugins:  elementor
  * Elementor tested up to: 4.0
@@ -60,7 +60,7 @@ final class Mega_Menu_Builder {
 	 */
 	public function __construct() {
 		add_action( 'plugins_loaded', [ $this, 'on_plugins_loaded' ] );
-		add_action( 'init', [ $this, 'load_textdomain' ] );
+		// Textdomain loaded automatically by WordPress.org
 		add_action( 'admin_menu', [ $this, 'register_admin_menu' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_scripts' ] );
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'enqueue_editor_scripts' ] );
@@ -69,13 +69,6 @@ final class Mega_Menu_Builder {
 		add_action( 'wp_ajax_mmb_clear_all_templates', [ $this, 'ajax_clear_all_templates' ] );
 		add_action( 'wp_ajax_mmb_load_template_data', [ $this, 'ajax_load_template_data' ] );
 		add_shortcode( 'mmb_menu', [ $this, 'render_menu_shortcode' ] );
-	}
-
-	/**
-	 * Load plugin textdomain
-	 */
-	public function load_textdomain() {
-		load_plugin_textdomain( 'mega-menu-builder-for-elementor', false, dirname( MMB_PLUGIN_BASE ) . '/languages' );
 	}
 
 	/**
@@ -234,19 +227,19 @@ final class Mega_Menu_Builder {
 			return;
 		}
 
-		// Enqueue SweetAlert2
+		// Enqueue SweetAlert2 (local files)
 		wp_enqueue_style(
-			'sweetalert2',
-			'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css',
+			'mmb-sweetalert2',
+			MMB_URL . 'admin/assets/vendor/sweetalert2/sweetalert2.min.css',
 			[],
-			'11.0.0'
+			'11.14.5'
 		);
 
 		wp_enqueue_script(
-			'sweetalert2',
-			'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js',
+			'mmb-sweetalert2',
+			MMB_URL . 'admin/assets/vendor/sweetalert2/sweetalert2.min.js',
 			[],
-			'11.0.0',
+			'11.14.5',
 			true
 		);
 
@@ -254,7 +247,7 @@ final class Mega_Menu_Builder {
 		wp_enqueue_style(
 			'mmb-dashboard',
 			MMB_URL . 'admin/assets/css/dashboard.css',
-			[],
+			[ 'mmb-sweetalert2' ],
 			MMB_VERSION
 		);
 
@@ -262,7 +255,7 @@ final class Mega_Menu_Builder {
 		wp_enqueue_script(
 			'mmb-dashboard',
 			MMB_URL . 'admin/assets/js/dashboard.js',
-			[ 'jquery', 'sweetalert2' ],
+			[ 'jquery', 'mmb-sweetalert2' ],
 			MMB_VERSION,
 			true
 		);
@@ -313,7 +306,7 @@ final class Mega_Menu_Builder {
 		}
 
 		// Get template ID
-		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( $_POST['template_id'] ) : '';
+		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( wp_unslash( $_POST['template_id'] ) ) : '';
 
 		if ( empty( $template_id ) ) {
 			wp_send_json_error( [ 'message' => esc_html__( 'Invalid template ID.', 'mega-menu-builder-for-elementor' ) ] );
@@ -386,7 +379,7 @@ final class Mega_Menu_Builder {
 		}
 
 		// Get template ID
-		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( $_POST['template_id'] ) : '';
+		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( wp_unslash( $_POST['template_id'] ) ) : '';
 
 		if ( empty( $template_id ) ) {
 			wp_send_json_error( [ 'message' => esc_html__( 'Invalid template ID.', 'mega-menu-builder-for-elementor' ) ] );
@@ -442,7 +435,7 @@ final class Mega_Menu_Builder {
 		}
 
 		// Get template ID
-		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( $_POST['template_id'] ) : '';
+		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( wp_unslash( $_POST['template_id'] ) ) : '';
 
 		if ( empty( $template_id ) ) {
 			wp_send_json_error( [ 'message' => esc_html__( 'Invalid template ID.', 'mega-menu-builder-for-elementor' ) ] );
@@ -665,7 +658,7 @@ final class Mega_Menu_Builder {
 
 			<ul class="mmb-mm-nav<?php echo ( $is_vert && $cat_open ) ? ' mmb-mm-nav-open' : ''; ?>" role="menubar">
 			<?php foreach ( $menu_items as $item ) :
-				$type = ! empty( $item['dropdown_type'] ) ? $item['dropdown_type'] : 'none';
+				$type = ! empty( $item['dropdown_type'] ) ? sanitize_key( $item['dropdown_type'] ) : 'none';
 				$has_drop = 'none' !== $type;
 				$label = ! empty( $item['item_label'] ) ? $item['item_label'] : '';
 				$url = ! empty( $item['item_link']['url'] ) ? $item['item_link']['url'] : '#';
@@ -682,8 +675,8 @@ final class Mega_Menu_Builder {
 					<?php endif; ?>
 				</a>
 				<?php if ( $has_drop ) : ?>
-				<div class="mmb-mm-dropdown<?php echo 'mega' === $type ? ' mmb-mm-mega' : ''; ?>">
-					<?php echo $this->render_dropdown_content( $item, $type ); ?>
+				<div class="mmb-mm-dropdown<?php echo 'mega' === $type ? ' mmb-mm-mega' : ''; ?>" role="region">
+					<?php echo wp_kses_post( $this->render_dropdown_content( $item, $type ) ); ?>
 				</div>
 				<?php endif; ?>
 			</li>
