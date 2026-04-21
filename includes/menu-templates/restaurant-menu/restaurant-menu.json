@@ -96,8 +96,7 @@
                         }
                       }
                     ],
-                    "_id": "839f479",
-                    "activeItemIndex": 1
+                    "_id": "839f479"
                   },
                   {
                     "col_heading": "Accessories",
@@ -151,8 +150,7 @@
                         }
                       }
                     ],
-                    "_id": "1f1a57d",
-                    "activeItemIndex": 1
+                    "_id": "1f1a57d"
                   },
                   {
                     "col_heading": "Lightings",
@@ -206,8 +204,7 @@
                         }
                       }
                     ],
-                    "_id": "627367b",
-                    "activeItemIndex": 1
+                    "_id": "627367b"
                   },
                   {
                     "col_heading": "Texture Lab",
@@ -261,11 +258,9 @@
                         }
                       }
                     ],
-                    "_id": "46a3be9",
-                    "activeItemIndex": 1
+                    "_id": "46a3be9"
                   }
-                ],
-                "activeItemIndex": 1
+                ]
               },
               {
                 "item_label": "Shop",
@@ -354,8 +349,7 @@
                         }
                       }
                     ],
-                    "_id": "aaa7527",
-                    "activeItemIndex": 1
+                    "_id": "aaa7527"
                   },
                   {
                     "col_heading": "Accessories",
@@ -409,8 +403,7 @@
                         }
                       }
                     ],
-                    "_id": "12e489e",
-                    "activeItemIndex": 1
+                    "_id": "12e489e"
                   },
                   {
                     "col_heading": "Lightings",
@@ -464,8 +457,7 @@
                         }
                       }
                     ],
-                    "_id": "4833c12",
-                    "activeItemIndex": 1
+                    "_id": "4833c12"
                   },
                   {
                     "col_heading": "Texture Lab",
@@ -519,11 +511,9 @@
                         }
                       }
                     ],
-                    "_id": "b86bf8f",
-                    "activeItemIndex": 1
+                    "_id": "b86bf8f"
                   }
-                ],
-                "activeItemIndex": 1
+                ]
               },
               {
                 "_id": "9605186",
@@ -610,8 +600,7 @@
                         }
                       }
                     ],
-                    "_id": "0bf9f8a",
-                    "activeItemIndex": 1
+                    "_id": "0bf9f8a"
                   },
                   {
                     "col_heading": "Accessories",
@@ -665,8 +654,7 @@
                         }
                       }
                     ],
-                    "_id": "1f4ea5f",
-                    "activeItemIndex": 1
+                    "_id": "1f4ea5f"
                   },
                   {
                     "col_heading": "Lightings",
@@ -720,8 +708,7 @@
                         }
                       }
                     ],
-                    "_id": "18c6f82",
-                    "activeItemIndex": 1
+                    "_id": "18c6f82"
                   },
                   {
                     "col_heading": "Texture Lab",
@@ -775,11 +762,9 @@
                         }
                       }
                     ],
-                    "_id": "1f7171b",
-                    "activeItemIndex": 1
+                    "_id": "1f7171b"
                   }
-                ],
-                "activeItemIndex": 1
+                ]
               },
               {
                 "item_label": "Blog",
@@ -867,8 +852,7 @@
                         }
                       }
                     ],
-                    "_id": "df94309",
-                    "activeItemIndex": 1
+                    "_id": "df94309"
                   },
                   {
                     "col_heading": "Accessories",
@@ -922,8 +906,7 @@
                         }
                       }
                     ],
-                    "_id": "4a6001b",
-                    "activeItemIndex": 1
+                    "_id": "4a6001b"
                   },
                   {
                     "col_heading": "Lightings",
@@ -977,8 +960,7 @@
                         }
                       }
                     ],
-                    "_id": "08d33e0",
-                    "activeItemIndex": 1
+                    "_id": "08d33e0"
                   },
                   {
                     "col_heading": "Texture Lab",
@@ -1032,11 +1014,9 @@
                         }
                       }
                     ],
-                    "_id": "a8efd15",
-                    "activeItemIndex": 1
+                    "_id": "a8efd15"
                   }
-                ],
-                "activeItemIndex": 1
+                ]
               },
               {
                 "item_label": "Contact",
@@ -1123,8 +1103,7 @@
                         }
                       }
                     ],
-                    "_id": "1a0b2ca",
-                    "activeItemIndex": 1
+                    "_id": "1a0b2ca"
                   },
                   {
                     "col_heading": "Accessories",
@@ -1178,8 +1157,7 @@
                         }
                       }
                     ],
-                    "_id": "f8aa84c",
-                    "activeItemIndex": 1
+                    "_id": "f8aa84c"
                   },
                   {
                     "col_heading": "Lightings",
@@ -1233,8 +1211,7 @@
                         }
                       }
                     ],
-                    "_id": "bf98822",
-                    "activeItemIndex": 1
+                    "_id": "bf98822"
                   },
                   {
                     "col_heading": "Texture Lab",
@@ -1288,11 +1265,9 @@
                         }
                       }
                     ],
-                    "_id": "4bc5252",
-                    "activeItemIndex": 1
+                    "_id": "4bc5252"
                   }
-                ],
-                "activeItemIndex": 1
+                ]
               }
             ],
             "nav_bg_background": "gradient",

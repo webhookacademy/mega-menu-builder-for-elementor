@@ -45,8 +45,7 @@ private function get_available_templates() {
 	$options = [ '' => esc_html__( '— Select Imported Template —', 'mega-menu-builder-for-elementor' ) ];
 	
 	if ( empty( $saved_templates ) ) {
-		$options[''] = esc_html__( '— No templates imported yet. Import from dashboard first. —', 'mega-menu-builder-for-elementor' );
-		return $options;
+		return []; // Return empty array to hide section
 	}
 	
 	foreach ( $saved_templates as $template_id => $template ) {
@@ -66,35 +65,41 @@ private function get_post_types() {
 }
 
 	protected function register_controls() {
-		// ── Template Selector Section ────────────────────────────────────────
-		$this->start_controls_section( 'section_template', [
-			'label' => esc_html__( 'Template', 'mega-menu-builder-for-elementor' ),
-			'tab'   => Controls_Manager::TAB_CONTENT,
-		] );
+		// Check if templates exist
+		$available_templates = $this->get_available_templates();
+		$has_templates = ! empty( $available_templates );
+		
+		// ── Template Selector Section (only show if templates exist) ────────
+		if ( $has_templates ) {
+			$this->start_controls_section( 'section_template', [
+				'label' => esc_html__( 'Template', 'mega-menu-builder-for-elementor' ),
+				'tab'   => Controls_Manager::TAB_CONTENT,
+			] );
 
-		$this->add_control( 'load_template', [
-			'label'       => esc_html__( 'Load Template', 'mega-menu-builder-for-elementor' ),
-			'type'        => Controls_Manager::SELECT,
-			'options'     => $this->get_available_templates(),
-			'default'     => '',
-			'description' => esc_html__( 'Select a template to load menu items. You can customize after loading.', 'mega-menu-builder-for-elementor' ),
-		] );
+			$this->add_control( 'load_template', [
+				'label'       => esc_html__( 'Load Template', 'mega-menu-builder-for-elementor' ),
+				'type'        => Controls_Manager::SELECT,
+				'options'     => $available_templates,
+				'default'     => '',
+				'description' => esc_html__( 'Select a template to load menu items. You can customize after loading.', 'mega-menu-builder-for-elementor' ),
+			] );
 
-		$this->add_control( 'template_info', [
-			'type'            => Controls_Manager::RAW_HTML,
-			'raw'             => '<div style="background:#e8f5e9;padding:15px;border-radius:6px;margin-top:10px;"><strong style="color:#2e7d32;">ℹ️ How to use:</strong><ol style="margin:10px 0 0 0;padding-left:20px;color:#555;"><li>Go to <strong>Mega Menu Dashboard</strong></li><li>Click <strong>Import Now</strong> on any template</li><li>Come back here and select imported template</li><li>Click <strong>Apply Template</strong> button</li><li>Menu items will load - customize as needed!</li></ol></div>',
-			'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
-		] );
+			$this->add_control( 'template_info', [
+				'type'            => Controls_Manager::RAW_HTML,
+				'raw'             => '<div style="background:#e8f5e9;padding:15px;border-radius:6px;margin-top:10px;"><strong style="color:#2e7d32;">ℹ️ How to use:</strong><ol style="margin:10px 0 0 0;padding-left:20px;color:#555;"><li>Select a template from dropdown above</li><li>Click <strong>Apply Template</strong> button</li><li>Menu items will load with all styling</li><li>Customize as needed!</li></ol></div>',
+				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
+			] );
 
-		$this->add_control( 'apply_template_button', [
-			'type'        => Controls_Manager::BUTTON,
-			'text'        => esc_html__( 'Apply Template', 'mega-menu-builder-for-elementor' ),
-			'button_type' => 'success',
-			'event'       => 'mmb:applyTemplate',
-			'condition'   => [ 'load_template!' => '' ],
-		] );
+			$this->add_control( 'apply_template_button', [
+				'type'        => Controls_Manager::BUTTON,
+				'text'        => esc_html__( 'Apply Template', 'mega-menu-builder-for-elementor' ),
+				'button_type' => 'success',
+				'event'       => 'mmb:applyTemplate',
+				'condition'   => [ 'load_template!' => '' ],
+			] );
 
-		$this->end_controls_section();
+			$this->end_controls_section();
+		}
 
 		$this->start_controls_section( 'section_layout', [ 'label' => esc_html__( 'Layout', 'mega-menu-builder-for-elementor' ), 'tab' => Controls_Manager::TAB_CONTENT ] );
 		$this->add_control( 'menu_layout', [ 'label' => esc_html__( 'Orientation', 'mega-menu-builder-for-elementor' ), 'type' => Controls_Manager::CHOOSE, 'options' => [ 'horizontal' => [ 'title' => esc_html__( 'Horizontal', 'mega-menu-builder-for-elementor' ), 'icon' => 'eicon-navigation-horizontal' ], 'vertical' => [ 'title' => esc_html__( 'Vertical', 'mega-menu-builder-for-elementor' ), 'icon' => 'eicon-navigation-vertical' ] ], 'default' => 'horizontal', 'toggle' => false ] );
@@ -246,13 +251,21 @@ private function get_post_types() {
 			'type'        => Controls_Manager::REPEATER,
 			'fields'      => $col_link->get_controls(),
 			'title_field' => '{{{ link_label }}}',
+			'prevent_empty' => false,
 			'default'     => [
 				[ 'link_label' => 'Item One', 'link_url' => [ 'url' => '#' ] ],
 				[ 'link_label' => 'Item Two', 'link_url' => [ 'url' => '#' ] ],
 				[ 'link_label' => 'Item Three', 'link_url' => [ 'url' => '#' ] ],
 			],
 		] );
-		$repeater->add_control( 'mega_columns', [ 'label' => esc_html__( 'Mega Columns', 'mega-menu-builder-for-elementor' ), 'type' => Controls_Manager::REPEATER, 'fields' => $col->get_controls(), 'title_field' => '{{{ col_heading }}}', 'condition' => [ 'dropdown_type' => 'mega' ], 'default' => [
+		$repeater->add_control( 'mega_columns', [ 
+			'label' => esc_html__( 'Mega Columns', 'mega-menu-builder-for-elementor' ), 
+			'type' => Controls_Manager::REPEATER, 
+			'fields' => $col->get_controls(), 
+			'title_field' => '{{{ col_heading }}}', 
+			'condition' => [ 'dropdown_type' => 'mega' ],
+			'prevent_empty' => false,
+			'default' => [
 			[ 'col_heading' => 'Furniture', 'col_links' => [
 				[ 'link_label' => 'Dining Chairs', 'link_url' => [ 'url' => '#' ] ],
 				[ 'link_label' => 'Counter Stools', 'link_url' => [ 'url' => '#' ] ],

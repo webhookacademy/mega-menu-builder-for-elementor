@@ -492,14 +492,44 @@ final class Mega_Menu_Builder {
 		// Extract menu_items separately
 		$menu_items = isset( $settings['menu_items'] ) ? $settings['menu_items'] : [];
 		
+		// Clean menu items - remove Elementor internal properties
+		$menu_items = $this->clean_elementor_data( $menu_items );
+		
 		// Remove menu_items from settings to avoid duplication
 		unset( $settings['menu_items'] );
+		
+		// Clean settings too
+		$settings = $this->clean_elementor_data( $settings );
 		
 		// Return ALL settings (colors, typography, spacing, etc.)
 		return [
 			'settings' => $settings,
 			'menu_items' => $menu_items
 		];
+	}
+
+	/**
+	 * Clean Elementor internal properties from data
+	 */
+	private function clean_elementor_data( $data ) {
+		if ( is_array( $data ) ) {
+			// Remove ONLY problematic Elementor internal keys
+			// Keep _id as it's required for repeater items
+			$internal_keys = [ 'activeItemIndex', '__dynamic__', 'isRepeaterItem', 'elType', 'isInner', 'widgetType' ];
+			
+			foreach ( $internal_keys as $key ) {
+				unset( $data[ $key ] );
+			}
+			
+			// Recursively clean nested arrays
+			foreach ( $data as $key => $value ) {
+				if ( is_array( $value ) ) {
+					$data[ $key ] = $this->clean_elementor_data( $value );
+				}
+			}
+		}
+		
+		return $data;
 	}
 
 	/**

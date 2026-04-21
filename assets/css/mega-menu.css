@@ -3,10 +3,25 @@
    ============================================================= */
 
 /* ── Reset ─────────────────────────────────────────────────── */
+/* Remove Elementor default widget spacing */
+.elementor-widget-mmb-mega-menu {
+  margin: 0 !important;
+}
+.elementor-widget-mmb-mega-menu .elementor-widget-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .mmb-mm-wrap *, .mmb-mm-wrap *::before, .mmb-mm-wrap *::after {
   box-sizing: border-box; margin: 0; padding: 0;
 }
-.mmb-mm-wrap { position: relative; font-family: inherit; width: 100%; }
+.mmb-mm-wrap { 
+  position: relative; 
+  font-family: inherit; 
+  width: 100%; 
+  margin: 0 !important; 
+  padding: 0 !important;
+}
 .mmb-mm-wrap ul, .mmb-mm-wrap li { list-style: none; }
 .mmb-mm-wrap a { text-decoration: none; color: inherit; }
 

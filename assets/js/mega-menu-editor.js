@@ -6,35 +6,75 @@
 	$(window).on('elementor:init', function() {
 		console.log('[MMB] Elementor editor initialized');
 
+		// Listen for template dropdown change
+		elementor.channels.editor.on('change', function(controlView) {
+			// Check if it's the load_template control
+			if (controlView && controlView.model && controlView.model.get('name') === 'load_template') {
+				var selectedValue = controlView.getControlValue();
+				console.log('[MMB] Template dropdown changed:', selectedValue);
+				
+				// If "Select Imported Template" is selected (empty value)
+				if (!selectedValue || selectedValue === '') {
+					console.log('[MMB] Default option selected, resetting to widget defaults');
+					
+					// Get current element
+					var currentElement = elementor.getPanelView().getCurrentPageView();
+					if (currentElement && currentElement.model) {
+						// Reset menu_items to default
+						var defaultMenuItems = [
+							{ 'item_label': 'Home', 'item_link': { 'url': '#' }, 'dropdown_type': 'none' },
+							{ 'item_label': 'Shop', 'item_link': { 'url': '#' }, 'dropdown_type': 'mega', 'item_badge': 'NEW' },
+							{ 'item_label': 'Blog', 'item_link': { 'url': '#' }, 'dropdown_type': 'posts' },
+							{ 'item_label': 'Contact', 'item_link': { 'url': '#' }, 'dropdown_type': 'none' }
+						];
+						
+						currentElement.model.setSetting('menu_items', defaultMenuItems);
+						currentElement.model.trigger('change');
+						currentElement.model.renderRemoteServer();
+						
+						elementor.notifications.showToast({
+							message: 'Reset to default menu items.',
+							buttons: []
+						});
+					}
+				}
+			}
+		});
+
 		// Listen for template apply button click
 		elementor.channels.editor.on('mmb:applyTemplate', function(panel) {
 			console.log('[MMB] Apply template button clicked');
-			console.log('[MMB] Panel:', panel);
 			
 			// Get current editing element
 			var currentElement = elementor.getPanelView().getCurrentPageView();
-			console.log('[MMB] Current Element:', currentElement);
 			
 			if (!currentElement || !currentElement.model) {
 				console.error('[MMB] No element model found');
-				alert('Please try again. Could not find widget.');
+				elementor.notifications.showToast({
+					message: 'Please try again.',
+					buttons: []
+				});
 				return;
 			}
 			
 			var settings = currentElement.model.get('settings');
-			console.log('[MMB] Settings:', settings);
-			
 			var templateId = settings.get('load_template');
+			
 			console.log('[MMB] Template ID:', templateId);
 			
 			if (!templateId) {
-				alert('Please select a template first.');
+				elementor.notifications.showToast({
+					message: 'Please select a template first.',
+					buttons: []
+				});
 				return;
 			}
 
-			// Show loading
-			var $panel = $('.elementor-panel');
-			$panel.append('<div class="mmb-loading-overlay" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:99999;display:flex;align-items:center;justify-content:center;"><div style="background:#fff;padding:30px;border-radius:8px;text-align:center;"><div class="elementor-loading" style="margin:0 auto 15px;"></div><p style="margin:0;font-size:16px;color:#333;">Loading template...</p></div></div>');
+			// Show loading toast
+			elementor.notifications.showToast({
+				message: 'Applying template...',
+				buttons: []
+			});
 
 			console.log('[MMB] Sending AJAX request...');
 
@@ -48,59 +88,58 @@
 					mmb_nonce: mmbEditorData.nonce
 				},
 				success: function(response) {
-					$('.mmb-loading-overlay').remove();
-					
 					console.log('[MMB] AJAX Response:', response);
 					
 					if (response.success && response.data) {
 						var templateData = response.data;
-						
 						console.log('[MMB] Template Data:', templateData);
 						
-						// Get the element model
 						var elementModel = currentElement.model;
 						
-						// Apply settings one by one
+						// Apply all settings
 						if (templateData.settings) {
 							$.each(templateData.settings, function(key, value) {
-								console.log('[MMB] Setting:', key, '=', value);
-								settings.set(key, value);
+								elementModel.setSetting(key, value);
 							});
 						}
 						
-						// Apply menu items
 						if (templateData.menu_items) {
-							console.log('[MMB] Menu Items:', templateData.menu_items.length, 'items');
-							settings.set('menu_items', templateData.menu_items);
+							elementModel.setSetting('menu_items', templateData.menu_items);
 						}
 						
-						// Save to history for undo/redo
-						elementor.history.history.startItem({
-							type: 'change',
-							title: 'Template Applied'
-						});
+						// Trigger change
+						elementModel.trigger('change');
 						
-						// Trigger render
-						elementModel.renderRemoteServer();
-						
-						// End history item
-						elementor.history.history.endItem();
-						
-						// Show success message
+						// Force auto-save then reload (no "Leave site?" dialog)
 						elementor.notifications.showToast({
-							message: 'Template loaded! Check the preview and Menu Items section below.',
+							message: 'Saving and refreshing...',
 							buttons: []
 						});
 						
-						console.log('[MMB] Template applied and preview updated');
+						// Use Elementor's save command
+						$e.run('document/save/auto', {
+							force: true,
+							onSuccess: function() {
+								console.log('[MMB] Saved successfully, reloading...');
+								// Reload after successful save
+								window.location.reload();
+							}
+						});
+						
+						console.log('[MMB] Template applied, saving...');
 					} else {
 						console.error('[MMB] Failed response:', response);
-						alert('Failed to load template: ' + (response.data && response.data.message ? response.data.message : 'Unknown error'));
+						elementor.notifications.showToast({
+							message: response.data && response.data.message ? response.data.message : 'Failed to load template.',
+							buttons: []
+						});
 					}
 				},
 				error: function(xhr, status, error) {
-					$('.mmb-loading-overlay').remove();
-					alert('Network error: ' + error);
+					elementor.notifications.showToast({
+						message: 'Network error. Please try again.',
+						buttons: []
+					});
 					console.error('[MMB] AJAX error:', error);
 				}
 			});
