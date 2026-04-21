@@ -1,283 +1,1368 @@
 {
+  "content": [
+    {
+      "id": "1db05368",
+      "settings": {
+        "flex_direction": "column"
+      },
+      "elements": [
+        {
+          "id": "2ca7cb4b",
+          "settings": {
+            "cat_header_label": "All Categories",
+            "menu_items": [
+              {
+                "item_label": "Home",
+                "item_link": {
+                  "url": "#"
+                },
+                "_id": "74b2e59",
+                "sub_items": [
+                  {
+                    "sub_label": "Sub Item 1",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "555e6c9",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  },
+                  {
+                    "sub_label": "Sub Item 2",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "68a2731",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  }
+                ],
+                "mega_columns": [
+                  {
+                    "col_heading": "Furniture",
+                    "col_links": [
+                      {
+                        "link_label": "Dining Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "4069cbb",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Counter Stools",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "2cd99d1",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Occasional Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "528ae24",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "839f479",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Accessories",
+                    "col_links": [
+                      {
+                        "link_label": "Cabinets",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "2b16eab",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Screens",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "fd9fe1e",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Outdoor Furniture",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "3d235b2",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "1f1a57d",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Lightings",
+                    "col_links": [
+                      {
+                        "link_label": "Benches",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "9c1826f",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Dining Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "db115d2",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Coffee Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "9014626",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "627367b",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Texture Lab",
+                    "col_links": [
+                      {
+                        "link_label": "Side Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "9808052",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Beside Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "bd66c2c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Lounge Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "1229b62",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "46a3be9",
+                    "activeItemIndex": 1
+                  }
+                ],
+                "activeItemIndex": 1
+              },
+              {
+                "item_label": "Shop",
+                "item_link": {
+                  "url": "#"
+                },
+                "dropdown_type": "mega",
+                "item_badge": "NEW",
+                "_id": "fc4e2f6",
+                "sub_items": [
+                  {
+                    "sub_label": "Sub Item 1",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "3d64a56",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  },
+                  {
+                    "sub_label": "Sub Item 2",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "a8a1990",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  }
+                ],
+                "mega_columns": [
+                  {
+                    "col_heading": "Furniture",
+                    "col_links": [
+                      {
+                        "link_label": "Dining Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "73dedad",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Counter Stools",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "be2185e",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Occasional Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "cb7cdce",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "aaa7527",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Accessories",
+                    "col_links": [
+                      {
+                        "link_label": "Cabinets",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "6ccbf5c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Screens",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "b5e083b",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Outdoor Furniture",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "71ae2cd",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "12e489e",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Lightings",
+                    "col_links": [
+                      {
+                        "link_label": "Benches",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "60d75ec",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Dining Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "39168a3",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Coffee Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "738e44c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "4833c12",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Texture Lab",
+                    "col_links": [
+                      {
+                        "link_label": "Side Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "f0afc9a",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Beside Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "167592c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Lounge Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "45b24fb",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "b86bf8f",
+                    "activeItemIndex": 1
+                  }
+                ],
+                "activeItemIndex": 1
+              },
+              {
+                "_id": "9605186",
+                "item_label": "New Arrival",
+                "item_badge": "HOT",
+                "badge_position": "top",
+                "dropdown_type": "products",
+                "sub_items": [
+                  {
+                    "sub_label": "Sub Item 1",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "647dc30",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  },
+                  {
+                    "sub_label": "Sub Item 2",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "bdd43e3",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  }
+                ],
+                "mega_columns": [
+                  {
+                    "col_heading": "Furniture",
+                    "col_links": [
+                      {
+                        "link_label": "Dining Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "b12bbd4",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Counter Stools",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "a6d7723",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Occasional Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "bb4c4c9",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "0bf9f8a",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Accessories",
+                    "col_links": [
+                      {
+                        "link_label": "Cabinets",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "23ad997",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Screens",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "3639409",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Outdoor Furniture",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "a128271",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "1f4ea5f",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Lightings",
+                    "col_links": [
+                      {
+                        "link_label": "Benches",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "3502ee6",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Dining Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "2c99a81",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Coffee Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "6deef8e",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "18c6f82",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Texture Lab",
+                    "col_links": [
+                      {
+                        "link_label": "Side Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "50e0a14",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Beside Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "3b26b01",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Lounge Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "403b475",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "1f7171b",
+                    "activeItemIndex": 1
+                  }
+                ],
+                "activeItemIndex": 1
+              },
+              {
+                "item_label": "Blog",
+                "item_link": {
+                  "url": "#"
+                },
+                "dropdown_type": "posts",
+                "_id": "97bb1f4",
+                "sub_items": [
+                  {
+                    "sub_label": "Sub Item 1",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "0ab18b6",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  },
+                  {
+                    "sub_label": "Sub Item 2",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "d4a4954",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  }
+                ],
+                "mega_columns": [
+                  {
+                    "col_heading": "Furniture",
+                    "col_links": [
+                      {
+                        "link_label": "Dining Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "7314a7a",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Counter Stools",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "21cddf2",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Occasional Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "4fc3463",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "df94309",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Accessories",
+                    "col_links": [
+                      {
+                        "link_label": "Cabinets",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "73f3050",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Screens",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "a4273cf",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Outdoor Furniture",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "e3fb9b6",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "4a6001b",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Lightings",
+                    "col_links": [
+                      {
+                        "link_label": "Benches",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "5590327",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Dining Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "b061351",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Coffee Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "1348c57",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "08d33e0",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Texture Lab",
+                    "col_links": [
+                      {
+                        "link_label": "Side Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "1a1b291",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Beside Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "78600dd",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Lounge Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "e7df12d",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "a8efd15",
+                    "activeItemIndex": 1
+                  }
+                ],
+                "activeItemIndex": 1
+              },
+              {
+                "item_label": "Contact",
+                "item_link": {
+                  "url": "#"
+                },
+                "_id": "81ff021",
+                "sub_items": [
+                  {
+                    "sub_label": "Sub Item 1",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "b10fafd",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  },
+                  {
+                    "sub_label": "Sub Item 2",
+                    "sub_link": {
+                      "url": "#"
+                    },
+                    "_id": "999fe17",
+                    "sub_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "sub_desc": ""
+                  }
+                ],
+                "mega_columns": [
+                  {
+                    "col_heading": "Furniture",
+                    "col_links": [
+                      {
+                        "link_label": "Dining Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "d0477ce",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Counter Stools",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "8c3f029",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Occasional Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "2338ff0",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "1a0b2ca",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Accessories",
+                    "col_links": [
+                      {
+                        "link_label": "Cabinets",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "8f933ab",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Screens",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "7276e44",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Outdoor Furniture",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "b7a5e5c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "f8aa84c",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Lightings",
+                    "col_links": [
+                      {
+                        "link_label": "Benches",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "2510e1c",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Dining Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "b33fc4e",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Coffee Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "3d6622d",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "bf98822",
+                    "activeItemIndex": 1
+                  },
+                  {
+                    "col_heading": "Texture Lab",
+                    "col_links": [
+                      {
+                        "link_label": "Side Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "f88041d",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Beside Tables",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "7754767",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      },
+                      {
+                        "link_label": "Lounge Chairs",
+                        "link_url": {
+                          "url": "#"
+                        },
+                        "_id": "af65997",
+                        "link_icon": {
+                          "value": "",
+                          "library": ""
+                        },
+                        "link_image": {
+                          "url": "",
+                          "id": "",
+                          "size": ""
+                        }
+                      }
+                    ],
+                    "_id": "4bc5252",
+                    "activeItemIndex": 1
+                  }
+                ],
+                "activeItemIndex": 1
+              }
+            ],
+            "nav_bg_background": "gradient",
+            "nav_bg_color": "#645FC2",
+            "nav_bg_color_b": "#812DD5",
+            "nav_padding": {
+              "unit": "px",
+              "top": "10",
+              "right": "10",
+              "bottom": "10",
+              "left": "10",
+              "isLinked": true
+            },
+            "item_color": "#0F0F0F",
+            "item_font_size": {
+              "unit": "px",
+              "size": 15,
+              "sizes": []
+            },
+            "dropdown_radius": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "dropdown_padding": {
+              "unit": "px",
+              "top": "10",
+              "right": "10",
+              "bottom": "10",
+              "left": "20",
+              "isLinked": false
+            },
+            "indicator_color": "#FFFFFF",
+            "mega_columns": [],
+            "dropdown_bg_background": "classic",
+            "dropdown_bg_color": "#A252EB",
+            "products_show_price_global": "",
+            "products_card_bg": "#FFFFFF",
+            "products_card_padding": {
+              "unit": "px",
+              "top": "10",
+              "right": "10",
+              "bottom": "10",
+              "left": "10",
+              "isLinked": true
+            },
+            "products_panel_gap": {
+              "unit": "px",
+              "size": 22,
+              "sizes": []
+            },
+            "menu_layout": "vertical",
+            "mega_link_icon_color": "#FFFFFF",
+            "mega_link_title_color": "#FFFFFF"
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "mmb-mega-menu",
+          "elType": "widget"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
   "title": "Restaurant Menu",
-  "settings": {
-    "menu_layout": "vertical",
-    "dropdown_trigger": "hover",
-    "dropdown_animation": "slide",
-    "mobile_breakpoint": 1024,
-    "cat_header_label": "Menu Categories",
-    "cat_header_open": "yes",
-    "vertical_sidebar_width": {
-      "size": 280,
-      "unit": "px"
-    }
-  },
-  "menu_items": [
-    {
-      "item_label": "Appetizers",
-      "item_link": {
-        "url": "#appetizers"
-      },
-      "item_icon": {
-        "value": "fas fa-utensils",
-        "library": "fa-solid"
-      },
-      "dropdown_type": "simple",
-      "sub_items": [
-        {
-          "sub_label": "Spring Rolls",
-          "sub_link": {
-            "url": "#spring-rolls"
-          },
-          "sub_desc": "Crispy vegetable rolls"
-        },
-        {
-          "sub_label": "Chicken Wings",
-          "sub_link": {
-            "url": "#wings"
-          },
-          "sub_desc": "Spicy buffalo wings"
-        },
-        {
-          "sub_label": "Garlic Bread",
-          "sub_link": {
-            "url": "#garlic-bread"
-          },
-          "sub_desc": "Toasted with herbs"
-        },
-        {
-          "sub_label": "Soup of the Day",
-          "sub_link": {
-            "url": "#soup"
-          },
-          "sub_desc": "Chef's special"
-        }
-      ]
-    },
-    {
-      "item_label": "Main Course",
-      "item_link": {
-        "url": "#main"
-      },
-      "item_icon": {
-        "value": "fas fa-drumstick-bite",
-        "library": "fa-solid"
-      },
-      "item_badge": "POPULAR",
-      "item_badge_color": "#27ae60",
-      "item_badge_text_color": "#ffffff",
-      "badge_position": "inline",
-      "dropdown_type": "mega",
-      "mega_columns": [
-        {
-          "col_heading": "Chicken",
-          "col_links": [
-            {
-              "link_label": "Grilled Chicken",
-              "link_url": {
-                "url": "#grilled-chicken"
-              }
-            },
-            {
-              "link_label": "Chicken Curry",
-              "link_url": {
-                "url": "#chicken-curry"
-              }
-            },
-            {
-              "link_label": "Fried Chicken",
-              "link_url": {
-                "url": "#fried-chicken"
-              }
-            }
-          ]
-        },
-        {
-          "col_heading": "Beef",
-          "col_links": [
-            {
-              "link_label": "Beef Steak",
-              "link_url": {
-                "url": "#beef-steak"
-              }
-            },
-            {
-              "link_label": "Beef Burger",
-              "link_url": {
-                "url": "#burger"
-              }
-            },
-            {
-              "link_label": "Beef Kebab",
-              "link_url": {
-                "url": "#kebab"
-              }
-            }
-          ]
-        },
-        {
-          "col_heading": "Seafood",
-          "col_links": [
-            {
-              "link_label": "Grilled Fish",
-              "link_url": {
-                "url": "#fish"
-              }
-            },
-            {
-              "link_label": "Shrimp Pasta",
-              "link_url": {
-                "url": "#shrimp"
-              }
-            },
-            {
-              "link_label": "Lobster",
-              "link_url": {
-                "url": "#lobster"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "item_label": "Pizza & Pasta",
-      "item_link": {
-        "url": "#pizza"
-      },
-      "item_icon": {
-        "value": "fas fa-pizza-slice",
-        "library": "fa-solid"
-      },
-      "dropdown_type": "simple",
-      "sub_items": [
-        {
-          "sub_label": "Margherita Pizza",
-          "sub_link": {
-            "url": "#margherita"
-          },
-          "sub_desc": "Classic tomato & cheese"
-        },
-        {
-          "sub_label": "Pepperoni Pizza",
-          "sub_link": {
-            "url": "#pepperoni"
-          },
-          "sub_desc": "Loaded with pepperoni"
-        },
-        {
-          "sub_label": "Spaghetti Carbonara",
-          "sub_link": {
-            "url": "#carbonara"
-          },
-          "sub_desc": "Creamy pasta"
-        },
-        {
-          "sub_label": "Lasagna",
-          "sub_link": {
-            "url": "#lasagna"
-          },
-          "sub_desc": "Layered pasta bake"
-        }
-      ]
-    },
-    {
-      "item_label": "Desserts",
-      "item_link": {
-        "url": "#desserts"
-      },
-      "item_icon": {
-        "value": "fas fa-ice-cream",
-        "library": "fa-solid"
-      },
-      "item_badge": "NEW",
-      "item_badge_color": "#e74c3c",
-      "item_badge_text_color": "#ffffff",
-      "badge_position": "inline",
-      "dropdown_type": "simple",
-      "sub_items": [
-        {
-          "sub_label": "Chocolate Cake",
-          "sub_link": {
-            "url": "#chocolate-cake"
-          },
-          "sub_icon": {
-            "value": "fas fa-birthday-cake",
-            "library": "fa-solid"
-          }
-        },
-        {
-          "sub_label": "Ice Cream",
-          "sub_link": {
-            "url": "#ice-cream"
-          },
-          "sub_icon": {
-            "value": "fas fa-ice-cream",
-            "library": "fa-solid"
-          }
-        },
-        {
-          "sub_label": "Tiramisu",
-          "sub_link": {
-            "url": "#tiramisu"
-          }
-        }
-      ]
-    },
-    {
-      "item_label": "Beverages",
-      "item_link": {
-        "url": "#beverages"
-      },
-      "item_icon": {
-        "value": "fas fa-coffee",
-        "library": "fa-solid"
-      },
-      "dropdown_type": "simple",
-      "sub_items": [
-        {
-          "sub_label": "Coffee",
-          "sub_link": {
-            "url": "#coffee"
-          },
-          "sub_desc": "Hot & Cold"
-        },
-        {
-          "sub_label": "Tea",
-          "sub_link": {
-            "url": "#tea"
-          },
-          "sub_desc": "Various flavors"
-        },
-        {
-          "sub_label": "Fresh Juice",
-          "sub_link": {
-            "url": "#juice"
-          },
-          "sub_desc": "Seasonal fruits"
-        },
-        {
-          "sub_label": "Soft Drinks",
-          "sub_link": {
-            "url": "#soft-drinks"
-          }
-        }
-      ]
-    },
-    {
-      "item_label": "Special Offers",
-      "item_link": {
-        "url": "#offers"
-      },
-      "item_icon": {
-        "value": "fas fa-gift",
-        "library": "fa-solid"
-      },
-      "item_badge": "SAVE 20%",
-      "item_badge_color": "#f39c12",
-      "item_badge_text_color": "#ffffff",
-      "badge_position": "top",
-      "dropdown_type": "none"
-    }
-  ]
+  "type": "page"
 }

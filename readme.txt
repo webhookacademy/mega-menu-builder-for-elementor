@@ -1,6 +1,6 @@
 === Mega Menu Builder for Elementor ===
-Contributors:      yourusername
-Author URI:        https://yourwebsite.com/
+Contributors:      webhookacademy
+Author URI:        https://webhookacademy.com/
 Requires at least: 6.0
 Requires PHP:      7.4
 Tested up to:      6.7
@@ -147,28 +147,6 @@ This plugin follows WordPress coding standards and security best practices:
 * XSS and CSRF protection
 * Regular security audits
 
-== Support ==
+## License
 
-For support, please visit our website or contact us through the WordPress.org support forum.
-
-== Credits ==
-
-This plugin uses the following open-source libraries:
-* Elementor - https://elementor.com/
-* Font Awesome - https://fontawesome.com/
-
-== License ==
-
-This plugin is licensed under the GPL v2 or later.
-
-Copyright (C) 2026 Your Name
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+Mega Menu Builder for Elementor is licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).

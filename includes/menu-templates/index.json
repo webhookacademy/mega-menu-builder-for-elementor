@@ -5,7 +5,7 @@
       "title": "Simple Navigation Menu",
       "description": "Clean and minimal horizontal navigation menu perfect for any website",
       "category": "basic",
-      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154827.png",
+      "thumbnail": "https://dev-powerkit-addons.pantheonsite.io/wp-content/uploads/2026/04/simple-menu.png",
       "preview_url": "",
       "file": "simple-menu/simple-menu.json",
       "features": [
@@ -21,7 +21,7 @@
       "title": "E-Commerce Mega Menu",
       "description": "Advanced mega menu with product categories, featured products, and promotional banners",
       "category": "ecommerce",
-      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154839.png",
+      "thumbnail": "https://dev-powerkit-addons.pantheonsite.io/wp-content/uploads/2026/04/ecommerce-menu.png",
       "preview_url": "",
       "file": "ecommerce-menu/ecommerce-menu.json",
       "features": [
@@ -38,7 +38,7 @@
       "title": "Restaurant Menu",
       "description": "Elegant vertical menu perfect for restaurants, cafes, and food businesses",
       "category": "business",
-      "thumbnail": "http://premium-plus-bd.local/wp-content/uploads/2026/04/Screenshot-2026-04-20-154853.png",
+      "thumbnail": "https://dev-powerkit-addons.pantheonsite.io/wp-content/uploads/2026/04/resturent-menu.png",
       "preview_url": "",
       "file": "restaurant-menu/restaurant-menu.json",
       "features": [

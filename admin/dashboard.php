@@ -69,11 +69,11 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 			<p class="mmb-subtitle"><?php esc_html_e( 'Create stunning navigation menus with pre-designed templates', 'mega-menu-builder-for-elementor' ); ?></p>
 		</div>
 		<div class="mmb-header-actions">
-			<a href="https://docs.yourwebsite.com" class="button" target="_blank">
+			<a href="#" class="button" target="_blank">
 				<span class="dashicons dashicons-book"></span>
 				<?php esc_html_e( 'Documentation', 'mega-menu-builder-for-elementor' ); ?>
 			</a>
-			<a href="https://support.yourwebsite.com" class="button" target="_blank">
+			<a href="#" class="button" target="_blank">
 				<span class="dashicons dashicons-sos"></span>
 				<?php esc_html_e( 'Support', 'mega-menu-builder-for-elementor' ); ?>
 			</a>
@@ -127,7 +127,13 @@ if ( isset( $_POST['mmb_import_template'] ) && check_admin_referer( 'mmb_import_
 				<span class="dashicons dashicons-saved"></span>
 				<?php esc_html_e( 'Your Imported Templates', 'mega-menu-builder-for-elementor' ); ?>
 			</h2>
-			<p class="mmb-section-desc"><?php esc_html_e( 'Manage your imported templates. You can delete templates you no longer need.', 'mega-menu-builder-for-elementor' ); ?></p>
+			<div style="display:flex;align-items:center;gap:15px;">
+				<p class="mmb-section-desc" style="margin:0;"><?php esc_html_e( 'Manage your imported templates. You can delete templates you no longer need.', 'mega-menu-builder-for-elementor' ); ?></p>
+				<button class="button button-secondary mmb-clear-all-templates" style="white-space:nowrap;">
+					<span class="dashicons dashicons-trash"></span>
+					<?php esc_html_e( 'Clear All', 'mega-menu-builder-for-elementor' ); ?>
+				</button>
+			</div>
 		</div>
 		<div class="mmb-imported-templates-list">
 			<?php foreach ( $saved_templates as $saved_id => $saved_template ) : ?>

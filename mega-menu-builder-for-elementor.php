@@ -4,8 +4,8 @@
  * Plugin URI:        https://wordpress.org/plugins/mega-menu-builder-for-elementor/
  * Description:       Advanced mega menu builder widget for Elementor with horizontal/vertical layouts, dropdown animations, WooCommerce products, posts integration, and mobile-responsive design.
  * Version:           1.0.0
- * Author:            Your Name
- * Author URI:        https://yourwebsite.com/
+ * Author:            Webhook Academy
+ * Author URI:        https://webhookacademy.com/
  * Text Domain:       mega-menu-builder-for-elementor
  * Domain Path:       /languages
  * License:           GPL v2 or later
@@ -66,6 +66,7 @@ final class Mega_Menu_Builder {
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'enqueue_editor_scripts' ] );
 		add_action( 'wp_ajax_mmb_import_template', [ $this, 'ajax_import_template' ] );
 		add_action( 'wp_ajax_mmb_delete_template', [ $this, 'ajax_delete_template' ] );
+		add_action( 'wp_ajax_mmb_clear_all_templates', [ $this, 'ajax_clear_all_templates' ] );
 		add_action( 'wp_ajax_mmb_load_template_data', [ $this, 'ajax_load_template_data' ] );
 		add_shortcode( 'mmb_menu', [ $this, 'render_menu_shortcode' ] );
 	}
@@ -409,6 +410,26 @@ final class Mega_Menu_Builder {
 	}
 
 	/**
+	 * AJAX handler for clearing all imported templates
+	 */
+	public function ajax_clear_all_templates() {
+		// Verify nonce
+		check_ajax_referer( 'mmb_import_template', 'mmb_nonce' );
+
+		// Check user capability
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( [ 'message' => esc_html__( 'Permission denied.', 'mega-menu-builder-for-elementor' ) ] );
+		}
+
+		// Clear all saved templates
+		delete_option( 'mmb_saved_templates' );
+
+		wp_send_json_success( [
+			'message' => esc_html__( 'All templates cleared successfully!', 'mega-menu-builder-for-elementor' ),
+		] );
+	}
+
+	/**
 	 * AJAX handler for loading template data in Elementor editor
 	 */
 	public function ajax_load_template_data() {
@@ -431,11 +452,76 @@ final class Mega_Menu_Builder {
 		$saved_templates = get_option( 'mmb_saved_templates', [] );
 
 		if ( isset( $saved_templates[ $template_id ] ) && isset( $saved_templates[ $template_id ]['data'] ) ) {
-			wp_send_json_success( $saved_templates[ $template_id ]['data'] );
+			$template_data = $saved_templates[ $template_id ]['data'];
+			
+			// Check if it's Elementor export format
+			if ( isset( $template_data['content'] ) && is_array( $template_data['content'] ) ) {
+				// Extract widget settings from Elementor export
+				$extracted_data = $this->extract_widget_data_from_elementor_export( $template_data );
+				if ( $extracted_data ) {
+					wp_send_json_success( $extracted_data );
+					return;
+				}
+			}
+			
+			// Return as is if it's simple format
+			wp_send_json_success( $template_data );
 			return;
 		}
 
 		wp_send_json_error( [ 'message' => esc_html__( 'Template not found. Please import it from dashboard first.', 'mega-menu-builder-for-elementor' ) ] );
+	}
+
+	/**
+	 * Extract widget data from Elementor export format
+	 */
+	private function extract_widget_data_from_elementor_export( $export_data ) {
+		if ( ! isset( $export_data['content'] ) || ! is_array( $export_data['content'] ) ) {
+			return false;
+		}
+
+		// Recursively search for mmb-mega-menu widget
+		$widget_data = $this->find_widget_in_content( $export_data['content'], 'mmb-mega-menu' );
+		
+		if ( ! $widget_data || ! isset( $widget_data['settings'] ) ) {
+			return false;
+		}
+
+		$settings = $widget_data['settings'];
+		
+		// Extract menu_items separately
+		$menu_items = isset( $settings['menu_items'] ) ? $settings['menu_items'] : [];
+		
+		// Remove menu_items from settings to avoid duplication
+		unset( $settings['menu_items'] );
+		
+		// Return ALL settings (colors, typography, spacing, etc.)
+		return [
+			'settings' => $settings,
+			'menu_items' => $menu_items
+		];
+	}
+
+	/**
+	 * Recursively find widget in Elementor content
+	 */
+	private function find_widget_in_content( $content, $widget_type ) {
+		foreach ( $content as $element ) {
+			// Check if this is the widget we're looking for
+			if ( isset( $element['widgetType'] ) && $element['widgetType'] === $widget_type ) {
+				return $element;
+			}
+
+			// Check nested elements
+			if ( isset( $element['elements'] ) && is_array( $element['elements'] ) ) {
+				$found = $this->find_widget_in_content( $element['elements'], $widget_type );
+				if ( $found ) {
+					return $found;
+				}
+			}
+		}
+
+		return null;
 	}
 
 	/**

@@ -181,6 +181,80 @@
 			});
 		});
 
+		// Clear all templates
+		$('.mmb-clear-all-templates').on('click', function(e) {
+			e.preventDefault();
+			
+			// Show SweetAlert confirmation
+			Swal.fire({
+				title: 'Clear All Templates?',
+				html: 'Are you sure you want to delete <strong>ALL</strong> imported templates?<br><small style="color:#e74c3c;">This will remove all templates from database. You can re-import them later.</small>',
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#e74c3c',
+				cancelButtonColor: '#95a5a6',
+				confirmButtonText: '<i class="dashicons dashicons-trash" style="font-size:16px;width:16px;height:16px;"></i> Yes, Clear All',
+				cancelButtonText: 'Cancel',
+				reverseButtons: true,
+				customClass: {
+					confirmButton: 'mmb-swal-confirm',
+					cancelButton: 'mmb-swal-cancel'
+				}
+			}).then((result) => {
+				if (result.isConfirmed) {
+					// Show loading
+					Swal.fire({
+						title: 'Clearing...',
+						html: 'Please wait while we clear all templates.',
+						allowOutsideClick: false,
+						allowEscapeKey: false,
+						didOpen: () => {
+							Swal.showLoading();
+						}
+					});
+					
+					// AJAX clear all
+					$.ajax({
+						url: mmbDashboard.ajaxUrl,
+						type: 'POST',
+						data: {
+							action: 'mmb_clear_all_templates',
+							mmb_nonce: mmbDashboard.nonce
+						},
+						success: function(response) {
+							if (response.success) {
+								Swal.fire({
+									title: 'Cleared!',
+									text: 'All templates have been cleared. Reloading page...',
+									icon: 'success',
+									timer: 1500,
+									showConfirmButton: false
+								}).then(() => {
+									location.reload();
+								});
+							} else {
+								Swal.fire({
+									title: 'Error!',
+									text: response.data.message || 'Failed to clear templates.',
+									icon: 'error',
+									confirmButtonColor: '#667eea'
+								});
+							}
+						},
+						error: function(xhr, status, error) {
+							Swal.fire({
+								title: 'Network Error!',
+								text: 'Please check your connection and try again.',
+								icon: 'error',
+								confirmButtonColor: '#667eea'
+							});
+							console.error('Clear error:', error);
+						}
+					});
+				}
+			});
+		});
+
 		// Close modal
 		$('.mmb-modal-close').on('click', function() {
 			$('#mmb-import-modal').fadeOut(300);
